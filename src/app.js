@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode.js')
 const forecast = require('./utils/forecast.js')
 const app = express()
+const port = process.env.PORT || 3000
 
 const viewpath = path.join(__dirname,'../template/views')
 const partialpath = path.join(__dirname,'../template/partials')
@@ -76,6 +77,6 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log('Server Started at localhost:3000')
+app.listen(port,()=>{
+    console.log('Server Started at localhost:'+port)
 })
