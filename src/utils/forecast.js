@@ -10,7 +10,7 @@ const foreCast = (latitude,longitude,callback)=>{
             callback('invalid location',undefined)
         }
         else{
-            callback(undefined,body.current.weather_descriptions+', it is '+ body.current.temperature + ' degree out. it feel like '+body.current.feelslike + ' degree out')
+            callback(undefined,body.current.weather_descriptions+', it is '+ body.current.temperature + ' degree out. it feel like '+body.current.feelslike + ' degree out.\n' + 'pressure is ' + body.current.pressure +'.\n humidity is '+body.current.humidity+'.')
          }
     })
 }
