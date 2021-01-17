@@ -1,4 +1,4 @@
-console.log('running script in client machine')
+
 
 const weather = document.querySelector('form')
 const search = document.querySelector('input')
